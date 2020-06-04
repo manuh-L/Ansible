@@ -1,0 +1,68 @@
+---
+- hosts: webservers
+
+  tasks:
+    - name: Garantir instalacao APACHE
+      yum: name=httpd state=present
+
+    - name: iniciar servico Apache boot
+      service: name=httpd enabled=yes state=started
+
+- hosts: dbservers
+  become: yes
+
+  tasks:
+    - name: Instalar pacotes [PostgreSQL e psycopg2]
+      yum:
+        name:
+          - postgresql-server
+          - python-psycopg2
+        state: present
+
+    - name: Verificar se postgreSQL esta inicializado
+      stat:
+        path: /var/lib/pgsql/data
+      register: folder_details
+
+    - name: Inicializar PostgreSQL DB
+      command: sudo /usr/bin/postgresql-setup initdb
+      when: folder_details.stat.isdir == false
+
+    - name: Iniciar servico PostgreSQL
+      service: name=postgresql state=started enabled=yes
+
+    - name: Criar user PostgreSQL boss e atribuir role CREATEDB
+      become_user: postgres
+      postgresql_user:
+        name: boss
+        password: Boss
+        role_attr_flags: CREATEDB
+
+    - name: Criar DB teste
+      become_user: postgres
+      postgresql_db:
+        name: teste_db
+        state: present
+
+    - name: Atribuir Acesso a DB
+      become_user: postgres
+      postgresql_privs:
+        db: teste_db
+        objs: ALL_IN_SCHEMA
+        role: boss
+        privs: ALL
+
+    - name: Mudar Owner
+      become_user: postgres
+      postgresql_owner:
+        db: teste_db
+        new_owner: boss
+
+    - name: Criar tabela pessoa
+      become_user: postgres
+      postgresql_table:
+        db: teste_db
+        table: pessoa
+        columns:
+          - id int primary key
+          - nome varchar
