@@ -16,7 +16,7 @@ This Playbook:
 #
 
  .
-- ├── ansible.cfg
+# ├── ansible.cfg
 - ├── deploy_vm.yml
 - ├── group_vars
 - │ └── windows.yml
