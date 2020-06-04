@@ -16,8 +16,8 @@ This Playbook:
 #
 
  .
-# ├── ansible.cfg
-* ├── deploy_vm.yml
+### ├── ansible.cfg
+### ├── deploy_vm.yml
 - ├── group_vars
 - │ └── windows.yml
 - ├── host_vars
