@@ -2,17 +2,17 @@
 - hosts: webservers
 
   tasks:
-    - name: Garantir instalacao APACHE
+    - name: Garantir instalacao Apache
       yum: name=httpd state=present
 
-    - name: iniciar servico Apache boot
+    - name: iniciar servico Apache,boot
       service: name=httpd enabled=yes state=started
 
 - hosts: dbservers
   become: yes
 
   tasks:
-    - name: Instalar pacotes [PostgreSQL e psycopg2]
+    - name: Instalar pacotes[PostgreSQL e psycopg2]
       yum:
         name:
           - postgresql-server
