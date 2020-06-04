@@ -3,6 +3,7 @@
 #Description
 
 This Playbook:
+
 • Create a windows VM from template and,
 • Join the VM to a Domain;
 • Configure/enable Winrm for Ansible
