@@ -38,7 +38,7 @@
         password: Boss
         role_attr_flags: CREATEDB
 
-    - name: Criar DB teste
+    - name: Criar DB
       become_user: postgres
       postgresql_db:
         name: teste_db
