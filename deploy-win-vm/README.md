@@ -12,6 +12,8 @@ This Playbook:
 • Create partition on disk 1, and give drive letter D
 • Format the D:\ drive D
 
+#
+
 .
 ├── ansible.cfg
 ├── deploy_vm.yml
