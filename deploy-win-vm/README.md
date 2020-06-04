@@ -16,13 +16,13 @@ This Playbook:
 #
 
  .
- ├── ansible.cfg
- ├── deploy_vm.yml
- ├── group_vars
- │ └── windows.yml
- ├── host_vars
- │ └── localhost.yml
- ├── inventory
- └── keys.yaml
+* ├── ansible.cfg
+* ├── deploy_vm.yml
+* ├── group_vars
+* │ └── windows.yml
+* ├── host_vars
+- │ └── localhost.yml
+- ├── inventory
+- └── keys.yaml
 
 2 directories, 6 files
