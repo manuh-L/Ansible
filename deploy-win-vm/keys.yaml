@@ -1,0 +1,4 @@
+---
+vcenter_password: "VMware1!"
+admin_password: Ansible!
+new_vm_password: VMware1!

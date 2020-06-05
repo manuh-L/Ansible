@@ -1,0 +1,15 @@
+---
+# Windows Credentials
+ansible_user: ansible@teste.lab
+ansible_password: Ansible$
+ansible_connection: winrm
+ansible_port: 5986
+ansible_winrm_server_cert_validation: ignore
+ansible_winrm_transport: ntlm
+
+#Remote user or group to be add Access
+group_name: Remote Desktop Users
+windows_user: teste.lab\manuh
+#disk D drive
+#filesystem_type: NTFS
+#label: Logs

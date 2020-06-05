@@ -1,0 +1,29 @@
+---
+#vCenter
+vcenter_ip: "192.168.1.100"
+vcenter_username: "administrator@vsphere.local"
+datacenter_name: "Maputo"
+cluster_name: "Dev"
+source_template: "Win2k16"
+vm_folder: "/Teste/vm"
+
+#guest
+hostname: TESTEVM
+ip_hostname: 192.168.1.200
+guest_domain: teste.lab
+dns_servers: "192.168.1.2"
+domain_admin: ansible@teste.lab
+gateway: 192.168.1.1
+subnet: 255.255.255.0
+
+#VM Resources
+ram_memory: 2048
+cpu: 2
+cores: 2
+scsi_controller: paravirtual
+datastore: "lab_DataStore01"
+network_label: "LAB"
+network_adapter: vmxnet3
+disk1_size: 60
+disk2_size: 10
+disk_type: thin
