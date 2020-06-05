@@ -28,6 +28,6 @@ Files:
 
 2 directories, 6 files
 
-#### To Execute run:
+#### To deploy, run:
 
 ansible-playbook deploy_vm.yml
