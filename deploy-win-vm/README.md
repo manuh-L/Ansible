@@ -4,14 +4,16 @@
 
 This Playbook:
 
-- Create a windows VM from template and,
+- Creates windows VM from template and,
 - Join the VM to a Domain;
-- Configure/enable Winrm for Ansible
-- Add a specified user to local Remote Desktop Users group of the Machine
-- Extend the C:\ drive if the size is
+- Configures/enable Winrm for Ansible
+- Adds a specified user to local Remote Desktop Users group of the Machine
+- Extends the C:\ drive if space is available
 - Initialize disk 1
-- Create partition on disk 1, and give drive letter D
-- Format the D:\ drive D
+- Creates partition on disk 1, and give drive letter D
+- Formats the D:\ drive D
+
+Files:
 
 ```
 ├── ansible.cfg
@@ -25,3 +27,6 @@ This Playbook:
 ```
 
 2 directories, 6 files
+
+To Execute run:
+ansible-playbook deploy_vm.yml
