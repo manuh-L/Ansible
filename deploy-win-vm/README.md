@@ -5,6 +5,7 @@
 This Playbook:
 
 - Creates windows VM from template and,
+- Configures hostname a network
 - Join the VM to a Domain;
 - Configures/enable Winrm for Ansible
 - Adds a specified user to local Remote Desktop Users group of the Machine
@@ -34,4 +35,4 @@ Files:
 
 #### To deploy, run:
 
-ansible-playbook deploy_vm.yml
+    ansible-playbook deploy_vm.yml
