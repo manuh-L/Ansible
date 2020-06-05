@@ -13,15 +13,15 @@ This Playbook:
 - Create partition on disk 1, and give drive letter D
 - Format the D:\ drive D
 
-#
+```
+ ├── ansible.cfg
+ ├── deploy_vm.yml
+ ├── group_vars
+ │ └── windows.yml
+ ├── host_vars
+ │ └── localhost.yml
+ ├── inventory
+ └── keys.yaml
+```
 
- .
-##### ├── ansible.cfg
-##### ├── deploy_vm.yml
-##### ├── group_vars
-##### │ └── windows.yml
-##### ├── host_vars
-##### │ └── localhost.yml
-##### ├── inventory
-##### └── keys.yaml
 2 directories, 6 files
