@@ -1,6 +1,6 @@
-#Ansible playbook to automate deployment of VM
+# Ansible playbook to automate deployment of VM
 
-#Description
+## Description
 
 This Playbook:
 
