@@ -28,7 +28,7 @@ Files:
 
 2 directories, 6 files
 
-- #### Keys.yaml:
+- # Keys.yaml:
   Contains the passwords of vCenter, Windows domain admin user, and the new password for local administrator.
   This file can be encrypted to ensure security, you can use ansible vault to do this.
 
