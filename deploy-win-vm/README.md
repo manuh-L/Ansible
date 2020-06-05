@@ -4,7 +4,7 @@
 
 This Playbook:
 
-- Creates windows VM from template and,
+- Creates windows VM from template, adds 1 disk and,
 - Configures hostname a network
 - Join the VM to a Domain;
 - Configures/enable Winrm for Ansible
