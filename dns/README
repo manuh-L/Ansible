@@ -1,0 +1,13 @@
+**Windows DNS Migration**
+I'm using Windows Server 2008 R2 
+#Objective
+Migrate dns to Windows Server 2016
+
+#Requirements 
+- PowerShell version >=3.0 and .NET Framework 4.0
+- WinRM enabled and configured (NTLM or Kerberos) on both Windows Servers
+- Ansible pywinrm module installed
+
+
+
+
