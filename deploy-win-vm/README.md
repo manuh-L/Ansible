@@ -8,7 +8,7 @@ This Playbook:
 - Configures hostname a network
 - Join the VM to a Domain;
 - Configures/enable Winrm for Ansible
-- Adds a specified user to local Remote Desktop Users group of the Machine
+- Adds a specified user to local group of the Machine
 - Extends the C:\ drive if space is available
 - Initialize disk 1
 - Creates partition on disk 1, and give drive letter D
